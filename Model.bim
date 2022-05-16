@@ -1,0 +1,767 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "en-IN",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/ssdatadiggers database windows net;db-DataDiggers",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "ssdatadiggers.database.windows.net",
+            "database": "db-DataDiggers"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "kind": "SQL",
+          "path": "ssdatadiggers.database.windows.net;db-DataDiggers",
+          "Username": "datadiggeradmin",
+          "EncryptConnection": true
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "CalendarDate",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DateKey",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "Date",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "DayOfMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayOfMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayName",
+            "dataType": "string",
+            "sourceColumn": "DayName"
+          },
+          {
+            "name": "DayOfWeekInMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayOfWeekInMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayOfWeekInYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayOfWeekInYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayOfQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayOfQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DayOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayOfYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekOfMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "WeekOfMonth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekOfQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "WeekOfQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "WeekOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "WeekOfYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sortByColumn": "Month"
+          },
+          {
+            "name": "MonthOfQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MonthOfQuarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "QuarterName",
+            "dataType": "string",
+            "sourceColumn": "QuarterName",
+            "sortByColumn": "Quarter"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "YearName",
+            "dataType": "string",
+            "sourceColumn": "YearName"
+          },
+          {
+            "name": "MonthYear",
+            "dataType": "dateTime",
+            "sourceColumn": "MonthYear",
+            "formatString": "MMMM, yyyy",
+            "sortByColumn": "MMYYYY",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"16393\" Group=\"YearMonth\" FormatString=\"MMMM, yyyy\" /></DateTimes></Format>"
+              }
+            ]
+          },
+          {
+            "name": "MMYYYY",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MMYYYY",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FirstDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfMonth",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "FirstDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfQuarter",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "LastDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfQuarter",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "FirstDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfYear",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "LastDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfYear",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "IsWeekday",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekday"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_DimDate = Source{[Schema=\"edw\",Item=\"DimDate\"]}[Data],",
+                "    FixAllDataTypes = Table.TransformColumnTypes(edw_DimDate,{{\"Date\", type date}, {\"DateKey\", Int64.Type}, {\"DayOfMonth\", Int64.Type}, {\"DayName\", type text}, {\"DayOfWeekInMonth\", Int64.Type}, {\"DayOfWeekInYear\", Int64.Type}, {\"DayOfQuarter\", Int64.Type}, {\"DayOfYear\", Int64.Type}, {\"WeekOfMonth\", Int64.Type}, {\"WeekOfQuarter\", Int64.Type}, {\"WeekOfYear\", Int64.Type}, {\"Month\", Int64.Type}, {\"MonthName\", type text}, {\"MonthOfQuarter\", Int64.Type}, {\"Quarter\", Int64.Type}, {\"QuarterName\", type text}, {\"Year\", Int64.Type}, {\"YearName\", type text}, {\"MonthYear\", type date}, {\"MMYYYY\", Int64.Type}, {\"FirstDayOfMonth\", type date}, {\"LastDayOfMonth\", type date}, {\"FirstDayOfQuarter\", type date}, {\"LastDayOfQuarter\", type date}, {\"FirstDayOfYear\", type date}, {\"LastDayOfYear\", type date}, {\"IsWeekday\", type logical}})",
+                "in",
+                "    FixAllDataTypes"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ethnicity",
+        "columns": [
+          {
+            "name": "Ethnicity Key",
+            "dataType": "int64",
+            "sourceColumn": "Ethnicity Key"
+          },
+          {
+            "name": "Country Name",
+            "dataType": "string",
+            "sourceColumn": "Country Name",
+            "dataCategory": "Country"
+          },
+          {
+            "name": "Ethnicity Name",
+            "dataType": "string",
+            "sourceColumn": "Ethnicity Name"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Dim_Ethnicity = Source{[Schema=\"edw\",Item=\"Dim_Ethnicity\"]}[Data],",
+                "    RemovedETLColumns = Table.RemoveColumns(edw_Dim_Ethnicity,{\"Updated_Date\", \"Created_Date\"}),",
+                "    RenamedColumnHeaders = Table.RenameColumns(RemovedETLColumns,{{\"Ethnicity_Key\", \"Ethnicity Key\"}, {\"Country_Name\", \"Country Name\"}, {\"Ethnicity_Name\", \"Ethnicity Name\"}})",
+                "in",
+                "    RenamedColumnHeaders"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Diversity",
+        "columns": [
+          {
+            "name": "Diversity Key",
+            "dataType": "int64",
+            "sourceColumn": "Diversity Key"
+          },
+          {
+            "name": "Department Name",
+            "dataType": "string",
+            "sourceColumn": "Department Name"
+          },
+          {
+            "name": "Diversity Name",
+            "dataType": "string",
+            "sourceColumn": "Diversity Name"
+          },
+          {
+            "name": "Diversity Weightage",
+            "dataType": "double",
+            "sourceColumn": "Diversity Weightage"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Dim_Diversity_Config = Source{[Schema=\"edw\",Item=\"Dim_Diversity_Config\"]}[Data],",
+                "    RemovedETLColumns = Table.RemoveColumns(edw_Dim_Diversity_Config,{\"Created_Date\", \"Updated_Date\", \"Is_active\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(RemovedETLColumns,{{\"Diversity_key\", \"Diversity Key\"}, {\"Department_Name\", \"Department Name\"}, {\"Diversity_Name\", \"Diversity Name\"}, {\"Diversity_Weightage\", \"Diversity Weightage\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Diversity Weightage\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomerLeader",
+        "columns": [
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key"
+          },
+          {
+            "name": "Customer Name",
+            "dataType": "string",
+            "sourceColumn": "Customer Name"
+          },
+          {
+            "name": "Customer Type",
+            "dataType": "string",
+            "sourceColumn": "Customer Type"
+          },
+          {
+            "name": "Leadership Type",
+            "dataType": "string",
+            "sourceColumn": "Leadership Type"
+          },
+          {
+            "name": "Leadership Role",
+            "dataType": "string",
+            "sourceColumn": "Leadership Role"
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender"
+          },
+          {
+            "name": "Customer Origin Country",
+            "dataType": "string",
+            "sourceColumn": "Customer Origin Country",
+            "dataCategory": "Country"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Dim_Customer = Source{[Schema=\"edw\",Item=\"Dim_Customer\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(edw_Dim_Customer,{\"Is_Active\", \"Created_Date\", \"Updated_Date\"}),",
+                "    RenamedColumnHeaders = Table.RenameColumns(#\"Removed Columns\",{{\"Customer_key\", \"Customer Key\"}, {\"Customer_Name\", \"Customer Name\"}, {\"Customer_type\", \"Customer Type\"}, {\"Leadership_Type\", \"Leadership Type\"}, {\"Leadership_Role\", \"Leadership Role\"}, {\"Customer_Origin_Country\", \"Customer Origin Country\"}})",
+                "in",
+                "    RenamedColumnHeaders"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Company",
+        "columns": [
+          {
+            "name": "Company Key",
+            "dataType": "int64",
+            "sourceColumn": "Company Key"
+          },
+          {
+            "name": "DUNS Number",
+            "dataType": "int64",
+            "sourceColumn": "DUNS Number"
+          },
+          {
+            "name": "DUNS Name",
+            "dataType": "string",
+            "sourceColumn": "DUNS Name"
+          },
+          {
+            "name": "County",
+            "dataType": "string",
+            "sourceColumn": "County",
+            "dataCategory": "County"
+          },
+          {
+            "name": "Street Address",
+            "dataType": "string",
+            "sourceColumn": "Street Address",
+            "dataCategory": "Address"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "dataCategory": "City"
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State"
+          },
+          {
+            "name": "Zip Code",
+            "dataType": "string",
+            "sourceColumn": "Zip Code",
+            "dataCategory": "PostalCode"
+          },
+          {
+            "name": "Phone Number",
+            "dataType": "string",
+            "sourceColumn": "Phone Number"
+          },
+          {
+            "name": "Longitude",
+            "dataType": "string",
+            "sourceColumn": "Longitude",
+            "dataCategory": "Longitude"
+          },
+          {
+            "name": "Latitude",
+            "dataType": "string",
+            "sourceColumn": "Latitude",
+            "dataCategory": "Latitude"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Dim_Company = Source{[Schema=\"edw\",Item=\"Dim_Company\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(edw_Dim_Company,{\"Is_Active\", \"Created_Date\", \"Updated_Date\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Company_Key\", \"Company Key\"}, {\"DUNS_Number\", \"DUNS Number\"}, {\"DUNS_Name\", \"DUNS Name\"}, {\"Street_Address\", \"Street Address\"}, {\"Zip_code\", \"Zip Code\"}, {\"Phone_Number\", \"Phone Number\"}}),",
+                "    FixDataType = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Zip Code\", type text}, {\"Latitude\", type text}, {\"Longitude\", type text}})",
+                "in",
+                "    FixDataType"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CustomerDiversity",
+        "columns": [
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key"
+          },
+          {
+            "name": "Diversity Key",
+            "dataType": "int64",
+            "sourceColumn": "Diversity Key"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Customer_Diversity_Mapping = Source{[Schema=\"edw\",Item=\"Customer_Diversity_Mapping\"]}[Data],",
+                "    RenamedColumnHeaders = Table.RenameColumns(edw_Customer_Diversity_Mapping,{{\"Customer_key\", \"Customer Key\"}, {\"Diversity_key\", \"Diversity Key\"}}),",
+                "    RemovedETLColumns = Table.RemoveColumns(RenamedColumnHeaders,{\"Load_Date\"})",
+                "in",
+                "    RemovedETLColumns"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Metrics",
+        "columns": [
+          {
+            "name": "Company Key",
+            "dataType": "int64",
+            "sourceColumn": "Company Key"
+          },
+          {
+            "name": "Ethnicity Key",
+            "dataType": "int64",
+            "sourceColumn": "Ethnicity Key"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key"
+          },
+          {
+            "name": "Is Customer Woman",
+            "dataType": "boolean",
+            "sourceColumn": "Is Customer Woman"
+          },
+          {
+            "name": "Is Customer Diverse",
+            "dataType": "boolean",
+            "sourceColumn": "Is Customer Diverse"
+          },
+          {
+            "name": "Diversity Score",
+            "dataType": "double",
+            "sourceColumn": "Diversity Score"
+          },
+          {
+            "name": "Is Owner",
+            "dataType": "int64",
+            "sourceColumn": "Is Owner"
+          },
+          {
+            "name": "Load Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Load Date",
+            "formatString": "Short Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/ssdatadiggers database windows net;db-DataDiggers\",",
+                "    edw_Fct_Customer_Diversity_Matrix = Source{[Schema=\"edw\",Item=\"Fct_Customer_Diversity_Matrix\"]}[Data],",
+                "    RenamedColumnHeaders = Table.RenameColumns(edw_Fct_Customer_Diversity_Matrix,{{\"Company_Key\", \"Company Key\"}, {\"Ethnicity_Key\", \"Ethnicity Key\"}, {\"Customer_key\", \"Customer Key\"}, {\"Is_Customer_Woman\", \"Is Customer Woman\"}, {\"Is_Customer_Diverse\", \"Is Customer Diverse\"}, {\"Diversity_Score\", \"Diversity Score\"}, {\"Is_Owner\", \"Is Owner\"}, {\"Load_Date\", \"Load Date\"}}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(RenamedColumnHeaders,{{\"Diversity Score\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Number of Customers",
+            "expression": " DISTINCTCOUNT(Metrics[Customer Key])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Number of Companies",
+            "expression": " DISTINCTCOUNT(Metrics[Company Key])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Male Customers",
+            "expression": " CALCULATE([Number of Customers], Metrics[Is Customer Woman] = FALSE())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Female Customers",
+            "expression": " CALCULATE([Number of Customers], Metrics[Is Customer Woman] = TRUE())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Female Owned",
+            "expression": " CALCULATE([Total Female Customers], Metrics[Is Owner] = 1)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Female Lead",
+            "expression": " CALCULATE([Total Female Customers], Metrics[Is Owner] = 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Pct of Female Owned",
+            "expression": " DIVIDE([Total Female Owned], [Number of Customers])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Pct of Female Lead",
+            "expression": " DIVIDE([Total Female Lead], [Number of Customers])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Number of Minority Customers",
+            "expression": " CALCULATE([Number of Customers], Metrics[Is Customer Diverse] = TRUE())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Minority Male Customers",
+            "expression": " CALCULATE([Number of Minority Customers], Metrics[Is Customer Woman] = FALSE())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Minority Female Customers",
+            "expression": " CALCULATE([Number of Minority Customers], Metrics[Is Customer Woman] = TRUE())",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Minority Owned",
+            "expression": " CALCULATE([Number of Minority Customers], Metrics[Is Owner] = 1)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Minority Lead",
+            "expression": " CALCULATE([Number of Minority Customers], Metrics[Is Owner] = 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Pct of Minority Owned",
+            "expression": " DIVIDE([Total Minority Owned], [Number of Minority Customers])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Pct of Minority Lead",
+            "expression": " DIVIDE([Total Minority Lead], [Number of Minority Customers])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Customer Diversity Score",
+            "expression": [
+              " ",
+              "IF(HASONEVALUE(CustomerLeader[Customer Name]),",
+              "MIN(Metrics[Diversity Score]),",
+              "BLANK()",
+              ")"
+            ],
+            "formatString": "0.00"
+          },
+          {
+            "name": "Total Minority Owned Companies",
+            "expression": " CALCULATE([Number of Companies], Metrics[Is Customer Diverse] = TRUE(), Metrics[Is Owner] = 1)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Total Minority Lead Companies",
+            "expression": " CALCULATE([Number of Companies], Metrics[Is Customer Diverse] = TRUE(), Metrics[Is Owner] = 0)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Pct of Minority Owned Companies",
+            "expression": " DIVIDE([Total Minority Owned Companies], [Number of Companies])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Pct of Minority Lead Companies",
+            "expression": " DIVIDE([Total Minority Lead Companies], [Number of Companies])",
+            "formatString": "0.00%;-0.00%;0.00%"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "25173904-4879-4329-9d2f-b74ff7fb5f3c",
+        "fromTable": "Metrics",
+        "fromColumn": "Company Key",
+        "toTable": "Company",
+        "toColumn": "Company Key"
+      },
+      {
+        "name": "599197fb-e052-4101-9738-b63d5157f31e",
+        "fromTable": "Metrics",
+        "fromColumn": "Load Date",
+        "toTable": "CalendarDate",
+        "toColumn": "Date"
+      },
+      {
+        "name": "0123ca42-4b0b-402e-aa47-fd1c243185cf",
+        "fromTable": "Metrics",
+        "fromColumn": "Customer Key",
+        "toTable": "CustomerLeader",
+        "toColumn": "Customer Key"
+      },
+      {
+        "name": "3294df67-d45c-4033-bac3-86d2d7307075",
+        "fromTable": "Metrics",
+        "fromColumn": "Ethnicity Key",
+        "toTable": "Ethnicity",
+        "toColumn": "Ethnicity Key"
+      },
+      {
+        "name": "005575da-39d5-4b74-8c6c-bb854fb5f1a2",
+        "fromTable": "CustomerDiversity",
+        "fromColumn": "Diversity Key",
+        "toTable": "Diversity",
+        "toColumn": "Diversity Key"
+      },
+      {
+        "name": "844be575-3587-40b8-ba6a-e8356a564648",
+        "fromTable": "CustomerDiversity",
+        "fromColumn": "Customer Key",
+        "toTable": "CustomerLeader",
+        "toColumn": "Customer Key",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
